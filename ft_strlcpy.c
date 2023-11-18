@@ -6,7 +6,7 @@
 /*   By: iben-haj <iben-haj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 18:38:23 by iben-haj          #+#    #+#             */
-/*   Updated: 2023/11/14 20:01:56 by iben-haj         ###   ########.fr       */
+/*   Updated: 2023/11/18 16:12:07 by iben-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,14 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 }
 /*=====================testing=======
 #include <stdio.h>
-#include <string.h>
+#include <bsd/string.h>
 
 int main()
 {
+	char dest[5];
+	char *src = "HELLO";
     // printf("here: %zu\n", ft_strlcpy("NULL", NULL, 0));
-    printf("here: %zu\n",  strlcpy("NULL", NULL, 0));
+    printf("here: %zu\n",  ft_strlcpy(dest, src, 9));
 
     return 0;
 }
