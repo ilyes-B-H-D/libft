@@ -13,12 +13,12 @@ CC = cc
 NAME = libft.a
 RM = rm -rf
 CFLAGS = -Wall -Wextra -Werror
-
+HEADER = libft.h
 all: $(NAME)
 	
-$(NAME): $(OBJECT)
+$(NAME): $(OBJECT) $(HEADER)
 
-bonus : $(OBJECT) $(OBJECT_B)
+bonus : $(OBJECT_B) $(HEADER)
 
 .c.o:
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -30,4 +30,4 @@ fclean: clean
 	$(RM) $(NAME)
 re: fclean all
 
-.PHONY: all bonus clean fclean re
+.PHONY: all bonus clean fclean re	

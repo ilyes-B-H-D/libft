@@ -6,7 +6,7 @@
 /*   By: iben-haj <iben-haj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 18:52:44 by iben-haj          #+#    #+#             */
-/*   Updated: 2023/11/18 15:28:02 by iben-haj         ###   ########.fr       */
+/*   Updated: 2023/11/18 19:30:43 by iben-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strnstr(const char *b, const char *l, size_t len)
 
 	i = 0;
 	j = 0;
+	if ((!b && l) && len == 0)
+		return (0);
 	if (l[0] == '\0')
 		return ((char *)b);
 	while (b[i] && i < len)

@@ -6,7 +6,7 @@
 /*   By: iben-haj <iben-haj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 08:41:41 by iben-haj          #+#    #+#             */
-/*   Updated: 2023/11/14 18:22:19 by iben-haj         ###   ########.fr       */
+/*   Updated: 2023/11/18 19:09:40 by iben-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (lst)
+	if (lst && f)
 	{
 		while (lst)
 		{

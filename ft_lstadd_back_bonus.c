@@ -6,7 +6,7 @@
 /*   By: iben-haj <iben-haj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:24:10 by iben-haj          #+#    #+#             */
-/*   Updated: 2023/11/14 18:22:19 by iben-haj         ###   ########.fr       */
+/*   Updated: 2023/11/18 19:08:28 by iben-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*tmp;
 
-	if (!new)
+	if (!new && !lst)
 		return ;
 	if (!*lst)
 	{

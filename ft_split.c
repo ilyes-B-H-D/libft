@@ -6,7 +6,7 @@
 /*   By: iben-haj <iben-haj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 13:17:04 by iben-haj          #+#    #+#             */
-/*   Updated: 2023/11/14 14:47:30 by iben-haj         ###   ########.fr       */
+/*   Updated: 2023/11/18 19:29:38 by iben-haj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static size_t	ft_word(const char *s, char c)
 
 	i = 0;
 	count = 0;
-	while (s[i] != '\0')
+	while (s && s[i] != '\0')
 	{
 		if (s[i] == c)
 			i++;
@@ -48,7 +48,7 @@ static int	ft_word_dup(const char *s, char c, char **res, size_t len)
 	size_t	i;
 
 	i = 0;
-	while (*s)
+	while (s && *s)
 	{
 		if (*s != c)
 		{
@@ -74,8 +74,6 @@ char	**ft_split(const char *s, char c)
 {
 	char	**res;
 
-	if (!s)
-		return (NULL);
 	res = malloc(sizeof(char *) * (ft_word(s, c) + 1));
 	if (!res)
 		return (NULL);
